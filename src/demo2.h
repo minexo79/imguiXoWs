@@ -1,5 +1,5 @@
-#ifndef _DEMO1_H
-#define _DEMO1_H
+#ifndef _DEMO2_H
+#define _DEMO2_H
 
 /* Stdio Include */
 #include <iostream>
@@ -14,9 +14,9 @@
 #endif
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
 
-#define GUI_STYLE_LIGHT
+// #define GUI_STYLE_LIGHT
 // #define GUI_STYLE_DARK
-// #define GUI_STYLE_CLASSIC
+#define GUI_STYLE_CLASSIC
 
 GLFWwindow * window;    // GLFW Opaque window object.
 

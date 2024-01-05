@@ -6,21 +6,21 @@ set(ROOT_DIR .)                                 # root source
 set(SOURCES ${ROOT_DIR}/src/demo1.cpp)          # demo app source
 
 set(IMGUI_SOURCES                               # imgui source
-    ${ROOT_DIR}/imgui/imgui.cpp
-    ${ROOT_DIR}/imgui/imgui_demo.cpp
-    ${ROOT_DIR}/imgui/imgui_draw.cpp
-    ${ROOT_DIR}/imgui/imgui_tables.cpp
-    ${ROOT_DIR}/imgui/imgui_widgets.cpp
-    ${ROOT_DIR}/imgui/backends/imgui_impl_glfw.cpp
-    ${ROOT_DIR}/imgui/backends/imgui_impl_opengl3.cpp
+    ${ROOT_DIR}/thirdparty/imgui/imgui.cpp
+    ${ROOT_DIR}/thirdparty/imgui/imgui_demo.cpp
+    ${ROOT_DIR}/thirdparty/imgui/imgui_draw.cpp
+    ${ROOT_DIR}/thirdparty/imgui/imgui_tables.cpp
+    ${ROOT_DIR}/thirdparty/imgui/imgui_widgets.cpp
+    ${ROOT_DIR}/thirdparty/imgui/backends/imgui_impl_glfw.cpp
+    ${ROOT_DIR}/thirdparty/imgui/backends/imgui_impl_opengl3.cpp
 )
 
 # EXE Output (Demo App)
 add_executable(${PROJECT_NAME} ${SOURCES} ${IMGUI_SOURCES})
 
 # Imgui Include
-target_include_directories(${PROJECT_NAME} PRIVATE ${ROOT_DIR}/imgui)
-target_include_directories(${PROJECT_NAME} PRIVATE ${ROOT_DIR}/imgui/backends)
+target_include_directories(${PROJECT_NAME} PRIVATE ${ROOT_DIR}/thirdparty/imgui)
+target_include_directories(${PROJECT_NAME} PRIVATE ${ROOT_DIR}/thirdparty/imgui/backends)
 
 set(CMAKE_CXX_STANDARD 11)              # C Standard
 

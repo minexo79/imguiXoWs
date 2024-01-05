@@ -1,4 +1,4 @@
-#include "demo1.h"
+#include "demo2.h"
 
 int main (void)
 {
@@ -43,8 +43,11 @@ int main (void)
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // Demo Window 1 
-        if (ImGui::Begin("Demo Window 1"))
+        // Demo Window 1, Set Maximize And Full Screen
+        // Disable Window Decoration (Title) & Collapse Button
+        ImGui::SetNextWindowPos(ImGui::GetMainViewport()->Pos);
+        ImGui::SetNextWindowSize(ImGui::GetMainViewport()->Size);
+        if (ImGui::Begin("Demo Window 1", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoDecoration))
         {
             ImGui::Text("This is Simple Application\nYou Can Click Select Box To Open Another Window...");
             if (ImGui::Button("Open!!"))
