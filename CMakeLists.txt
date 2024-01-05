@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project(imguixo)                                # project name
 
 set(ROOT_DIR .)                                 # root source
-set(SOURCES ${ROOT_DIR}/src/demo.cpp)           # demo app source
+set(SOURCES ${ROOT_DIR}/src/demo1.cpp)          # demo app source
 
 set(IMGUI_SOURCES                               # imgui source
     ${ROOT_DIR}/imgui/imgui.cpp
